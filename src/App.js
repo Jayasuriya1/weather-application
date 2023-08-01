@@ -46,7 +46,7 @@ function App() {
           {data != null ? 
           <div className='weather-data'>
             <h3 className='mt-4'>Weather in { data.name}</h3>
-            <h1 className='mt-3'>{data.main.temp}^C</h1>
+            <h1 className='mt-3'>{data.main.temp}&deg;C</h1>
             <div className='d-flex align-items-center'>
               <img src={`https://openweathermap.org/img/wn/${data.weather[0].icon}.png`}></img>
               <h4 className='h-100 pt-1 '>{data.weather[0].description}</h4>
