@@ -19,8 +19,6 @@ function App() {
       }else{
         alert("No weather found")
       }
-      
-      console.log("data",data)
     }
     getData()
   }
@@ -29,10 +27,10 @@ function App() {
       const responce = await fetch(url)
       const data = await responce.json()
       setData(data)
-      console.log("data",data)
     }
     getData()
   },[])
+  
   return (
     <div className='fluid-container body-container' style={{backgroundImage:`url(${imgUrl})`}}>
       <div className='main-container row justify-content-center align-items-center'>
@@ -62,40 +60,7 @@ function App() {
         </div>
       </div>
     </div>
-    // <div className='main-container' >
-    //   <div className='imagediv' style={{backgroundImage:`url(${imgUrl})`}}>
-    //     <div>iodasvsdsdvsdv</div>sdafmid
-    //   </div>
-    //   <div className='fluid-container '>
-    //     <div className='row'>
-    //       <div className='col-5' style={{backgroundColor:"black"}}>
-    //         dafadf
-    //       </div>
-    //     </div>
-      /* <div className='row content-container'>
-        <div className='col-5 content-container-2'>
-          <div className='search-container mt-5'>
-            <input type="text" name="search" onChange={(e)=>(setInput(e.target.value))}></input>
-            <div>
-              <i class='bx bx-search' style={{color:'#d8189e'}}  ></i>
-            </div>
-          </div>
-          <div className='weather-data'>
-            <h3 className='mt-4'>Weather in chennai</h3>
-            <h1 className='mt-3'>33.9^C</h1>
-            <h4>Scattered Clouds</h4>
-            <p>Scattered Clouds</p>
-          </div>
-          
-          <div >
-           
-          </div>
-        </div> */
-      /* </div> */
-    //   </div>
-    // </div>
   );
 }
 
 export default App;
-//background-image: url("https://source.unsplash.com/1600x900/?Delhi");
