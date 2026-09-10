@@ -1,7 +1,7 @@
 import { useEffect, useState, useCallback } from 'react';
 import './App.css';
 
-const API_KEY = '76d6c232e921ecd072a8114debe22075';
+const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
 const DEFAULT_CITY = 'Chennai';
 
 function App() {
